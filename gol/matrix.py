@@ -1,13 +1,8 @@
 import numpy as np
 
 seed = np.loadtxt('seed.txt', delimiter=' ', dtype="int")
+counter = 0
 
-
-# def search_one():
-#    for i in range(len(seed)):
-#        for j in range(len(seed[i])):
-#            if seed[i][j] == 1:
-#                return i, j
 
 def search(seed):
     positions = np.array(np.where(seed == 1)).tolist()
@@ -17,7 +12,7 @@ def search(seed):
     return positions_one
 
 
-def survival(seed, position):
+def survival(seed, position, counter_one):
     neighbor = [[position[0], position[1] - 1], [position[0], position[1] + 1],
                 [position[0] - 1, position[1] - 1], [position[0] - 1, position[1]], [position[0] - 1, position[1] + 1],
                 [position[0] + 1, position[1] - 1], [position[0] + 1, position[1]], [position[0] + 1, position[1] + 1]]
@@ -25,9 +20,17 @@ def survival(seed, position):
     for i in range(len(neighbor)):
         values = neighbor[i]
         if seed[values[0]][values[1]] == 1:
+            counter_one += 1
+
+    if counter_one > 3 or counter_one < 2:
+        seed[position[0]][position[1]] = 0
+
+    return seed
 
 
+# pos = search(seed)
+# for i in range(len(pos)):
+#    seed = survival(seed, pos[i], counter)
 
-survival(seed, [3, 5])
-# for i in range(len(search(seed))):
-#    print(f"La posicion del {i + 1}° uno es:{search(seed)[i]}")
+# print(seed)
+
