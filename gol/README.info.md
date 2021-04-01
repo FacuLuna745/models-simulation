@@ -1,10 +1,11 @@
-#Informe sobre las decisiones de diseño 📋
+#Informe sobre las decisiones de diseño
 <hr>
 
-##Arquitectura del sistema 📖
+##Arquitectura del sistema
 El sistema al ser sencillo elegimos crear dos archivos uno donde se encuentra toda la logica
 del mismo y otro archivo txt que es donde se carga el patron inicial.
-#### Archivo _life.py_ 📄
+
+#### Archivo _life.py_
 Este es el archivo principal donde se encuentra los métodos aplicados en el sistema:
 
 - `read_matrix()`: método que lee la matriz y devuelve un arrays de int.
@@ -20,7 +21,7 @@ Este es el archivo principal donde se encuentra los métodos aplicados en el sis
 la ejecución
 <hr>
 
-###Reglas del juego 📢
+###Reglas del juego
 En el siguiente apartado se explicara los métodos que utilizamos para comprobar los vecinos y la 
 supervivencia de las celdas:
 - `check_neighbor(matrix, x, y)`: en este método lo que hacemos es recibir por parametro

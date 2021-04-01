@@ -1,7 +1,7 @@
-##Instrucciones de instalación y de lanzamiento 📄
+##Instrucciones de instalación y de lanzamiento
 <hr>
 
-###Instalación 🔧 
+###Instalación
 Los pasos para la instalación son:
 ```
 git clone https://github.com/FacuLuna745/models-simulation.git
@@ -22,7 +22,7 @@ pip3 install -r requirements.txt
 ```
 <hr>
 
-###Lanzamiento 🚀
+###Lanzamiento
 1. Para el lanzamiento debemos estar en la ruta **models-simulation/gol**
 ```
 cd gol
