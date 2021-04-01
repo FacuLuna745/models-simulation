@@ -54,7 +54,7 @@ def check_running_gen(matrix):
             if matrix[x][y] == 0:
                 counter_zero += 1
     if counter_zero == (len(matrix) * len(matrix)):
-        print("Se salio de la ejecución ya que no hay mas generaciones")
+        print("\x1b[1;33m" + "Se salio de la ejecución ya que no hay más generaciones")
         return False
     else:
         return True
@@ -66,12 +66,12 @@ if __name__ == '__main__':
     gen = 0
     try:
         while run:
-            check = check_life_dead(matrix)
+            check_box = check_life_dead(matrix)
             gen = check_gen(gen)
-            print(f"{matrix} \nCeldas vivas: {check[0]} \nCeldas muertas: {check[1]} \nGeneración: {gen}")
+            print(f"{matrix} \nCeldas vivas: {check_box[0]} \nCeldas muertas: {check_box[1]} \nGeneración: {gen}")
             matrix = survival(matrix)
             time.sleep(1)
             os.system('clear')
             run = check_running_gen(matrix)
-    except (KeyboardInterrupt):
-        print("\n La ejecución se cancelo")
+    except KeyboardInterrupt:
+        print("\x1b[1;33m" + "\n La ejecución se cancelo manualmente")
