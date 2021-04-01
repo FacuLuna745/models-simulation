@@ -1,11 +1,11 @@
-#Informe sobre las decisiones de diseño
+# Informe sobre las decisiones de diseño 📋
 <hr>
 
-##Arquitectura del sistema
+## Arquitectura del sistema ⚙️
 El sistema al ser sencillo elegimos crear dos archivos uno donde se encuentra toda la logica
 del mismo y otro archivo txt que es donde se carga el patron inicial.
 
-#### Archivo _life.py_
+#### Archivo _life.py_ 📄
 Este es el archivo principal donde se encuentra los métodos aplicados en el sistema:
 
 - `read_matrix()`: método que lee la matriz y devuelve un arrays de int.
@@ -21,7 +21,7 @@ Este es el archivo principal donde se encuentra los métodos aplicados en el sis
 la ejecución
 <hr>
 
-###Reglas del juego
+### Reglas del juego 📢
 En el siguiente apartado se explicara los métodos que utilizamos para comprobar los vecinos y la 
 supervivencia de las celdas:
 - `check_neighbor(matrix, x, y)`: en este método lo que hacemos es recibir por parametro
@@ -39,7 +39,9 @@ una matriz, un valor de x y un valor de y, que nos va a permitir recorrer los 8 
   mayor que 3, esa posición pasa tener el valor 0, y si en la **_posición[x][y]_** tenemos un valor 0 y su número de vecinos es exactamente
   3, en esa posición la celda pasa a tener el valor 1, **todos estos cambios se lo hacemos a la matriz auxiliar**
   Una vez que se termina de comprobar la posición devolvemos una copia de la matriz auxiliar
-  <hr>
+  
+  
+<hr>
 
 Luego en la parte de ejecución se llaman a los demás métodos, donde aplicamos un tiempo para ir mostrando la matriz y limpiando
 la consola.
