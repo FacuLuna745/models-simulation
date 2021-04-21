@@ -5,12 +5,12 @@ import os
 def change_parameter():
     os.system("clear")
     print("\x1b[1;33m" + "Cambio de parametros: ")
-    delta_t = int(input("Ingrese el delta T: "))
+    delta_t = float(input("Ingrese el incremento de tiempo en semanas: "))
     hares = int(input("Ingrese la cantidad de liebres: "))
     fox = int(input("Ingrese la cantidad de zorros: "))
-    hares_rate = float(input("Ingrese la cantidad de liebres: "))
-    fox_rate = float(input("Ingrese la cantidad de liebres: "))
-    terrain_capacity = int(input("Ingrese la cantidad de liebres: "))
+    hares_rate = float(input("Ingrese la tasa de crecimiento de las liebres: "))
+    fox_rate = float(input("Ingrese la tasa de supervivencia de los zorros: "))
+    terrain_capacity = int(input("Ingrese la capacidad del terreno: "))
     week = int(input("Ingrese la cantidad de semanas: "))
 
     return delta_t, hares, fox, hares_rate, fox_rate, terrain_capacity, week
@@ -28,7 +28,7 @@ def parameter():
     return delta_t, hares, fox, hares_rate, fox_rate, terrain_capacity, week
 
 
-def graphic(total_hares, total_fox, week, delta_t):
+def graphic(total_hares, total_fox):
     # Diagrama de fase
     plt.plot(total_hares, total_fox)
     plt.title("Diagrama de fase")
@@ -39,7 +39,7 @@ def graphic(total_hares, total_fox, week, delta_t):
     plt.show()
 
     # Diagrama de población
-    plt.title("Diagrama de población")
+    plt.title("Diagrama de la variación en la población")
     plt.xlabel("Semanas")
     plt.ylabel("Población de liebres")
     plt.plot(total_hares, label="Liebres", color="blue")
@@ -66,7 +66,7 @@ def system(parameter):
         total_hares.append(parameter[1])
         total_fox.append(parameter[2])
 
-    graphic(total_hares, total_fox, parameter[0], parameter[6])
+    graphic(total_hares, total_fox)
 
 
 if __name__ == '__main__':
