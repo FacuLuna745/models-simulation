@@ -45,7 +45,7 @@ Para estos valores vamos a obtener las siguientes graficas:
 
 ![population_default](graphic/population_default.jpg)
 
-Donde podemos observar que el siguiente gráfico representa las dos poblaciones que tenemos, y como podemos observar al
+Donde podemos observar que el siguiente gráfico representa las dos poblaciones que tenemos, y al
 tener 2500 conejos y 2 zorros la probabilidad de caza es muy alta, por eso al principio tenemos un pico en la gráfica de
 los zorros y llegamos a tener casi 175 de ellos, es decir, que a medida que aumenta la población de zorros disminuye la
 población de liebres y a medidas que disminuye los zorros aumentan las liebres, y asi se realiza este ciclo hasta que
@@ -82,9 +82,9 @@ Dicha simulación nos arrojo los siguientes resultados:
 
 ![population_default](graphic/population_test.jpg)
 
-A comparación de las gráficas explicadas mas arriba, podemos observar que en este caso al ser más los zorros se comen a
-las liebres pero no les son suficientes para la supervivencia, por ende, se extinguen los zorros del terreno dando a
-lugar al crecimiento de mas liebres limitadas por el terreno como se puede ver que su capacidad maxima es 10
+A comparación de las gráficas explicadas más arriba, podemos observar que en este caso al ser más los zorros se comen a
+las liebres pero no son suficientes para la supervivencia, por ende, se extinguen los zorros del terreno dando
+lugar al crecimiento de más liebre(limitadas por el terreno).
 
 #### Diagrama de fase
 
@@ -121,7 +121,8 @@ pareciera que se encontro la estabilidad entre las dos poblaciones
 #### Diagrama de fase
 
 ![fase_default](graphic/phase_test_two.jpg)
+
 Para este caso vemos que nuestro punto inicial es el de la parte superior donde tenemos casi 800 liebres y 90 zorros, y
 a partir de ahi fueron decayendo las dos poblaciones hasta que los zorros dejaron de existir, aumentando la poblacion de
 liebres pero cuando teniamos el limite del terreno 1400 notamos que nacieron zorros llevando a la grafica a hacer lo que
-se ve reflejado entre los 1200-1400 liebres y 0-10 zorros.
+se ve reflejado entre lass 1200-1400 liebres y 0-10 zorros.
